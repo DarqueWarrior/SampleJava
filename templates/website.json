@@ -254,7 +254,7 @@
             "name": "[concat('CPUHigh ', parameters('hostingPlanName'))]",
             "description": "[concat('The average CPU is high across all the instances of ', parameters('hostingPlanName'))]",
             "isEnabled": false,
-            "condition": {
+,            "condition": {
                "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
                "dataSource": {
                   "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
@@ -319,7 +319,8 @@
             "displayName": "AppInsightsComponent"
          },
          "properties": {
-            "applicationId": "[parameters('webSiteName')]"
+            "applicationId": "[parameters('webSiteName')]",
+            "Application_Type": "java"
          }
       }
    ]
